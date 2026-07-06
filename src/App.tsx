@@ -24,8 +24,7 @@ import WhatsAppChat from "./components/WhatsAppChat";
 import FAQAccordion from "./components/FAQAccordion";
 
 // Import generated book bundle image
-// @ts-ignore
-import bundleImg from "./assets/images/dietoterapia_chinesa_bundle_1783347414172.jpg";
+const bundleImg = "https://i.ibb.co/8g0fQfRt/Chat-GPT-Image-6-lug-2026-11-15-23.png";
 
 // ============================================================================
 // REGION: FIXED BRAZILIAN REAL (BRL) CURRENCY CONFIGURATION
