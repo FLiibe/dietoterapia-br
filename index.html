@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Circular JSON Stringify Protection Guard -->
+    <script>
+      (function() {
+        var originalStringify = JSON.stringify;
+        JSON.stringify = function(value, replacer, space) {
+          var seen = [];
+          try {
+            return originalStringify(value, function(key, val) {
+              if (typeof val === "object" && val !== null) {
+                if (seen.indexOf(val) !== -1) {
+                  return "[Circular]";
+                }
+                seen.push(val);
+              }
+              if (replacer) {
+                return replacer(key, val);
+              }
+              return val;
+            }, space);
+          } catch (err) {
+            return "[Circular]";
+          }
+        };
+      })();
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manual de Dietoterapia Chinesa</title>
+    
+    <!-- SEO & Metadata -->
+    <meta name="description" content="Guia completo de Dietoterapia Chinesa para profissionais da saúde. Diretrizes clínicas práticas para tratar seus pacientes de forma natural." />
+    <meta name="keywords" content="dietoterapia chinesa, medicina tradicional chinesa, mtc, nutrição energética, acusalud" />
+    <meta name="author" content="AcuSalud" />
+
+    <!-- Open Graph / Facebook Link Preview Metadata -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Manual de Dietoterapia Chinesa - Guia Clínico Completo" />
+    <meta property="og:description" content="Obtenha acesso vitalício a diretrizes clínicas e receitas terapêuticas para tratar seus pacientes e prescrever alimentos de acordo com o diagnóstico energético tradicional da MTC." />
+    <meta property="og:image" content="https://i.ibb.co/SwYFdkpW/Chat-GPT-Image-3-lug-2026-10-57-05.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Manual Completo de Dietoterapia Chinesa e Bônus Exclusivos" />
+
+    <!-- Twitter Link Preview Metadata -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Manual de Dietoterapia Chinesa - Guia Clínico Completo" />
+    <meta name="twitter:description" content="Obtenha acesso vitalício a diretrizes clínicas e receitas terapêuticas para tratar seus pacientes de acordo com o diagnóstico da MTC." />
+    <meta name="twitter:image" content="https://i.ibb.co/SwYFdkpW/Chat-GPT-Image-3-lug-2026-10-57-05.png" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="/src/assets/images/acusalud_logo_icon_1783086740606.jpg" />
+
+    <!-- UTMify Pixel Script -->
+    <script>
+      window.pixelId = "6a480a6e50d141350b894a16";
+      var a = document.createElement("script");
+      a.setAttribute("async", "");
+      a.setAttribute("defer", "");
+      a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+      document.head.appendChild(a);
+    </script>
+    <!-- UTMify Latest UTMS Script -->
+    <script
+      src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+      data-utmify-prevent-subids
+      async
+      defer
+    ></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

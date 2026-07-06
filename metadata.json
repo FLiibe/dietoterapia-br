@@ -1,0 +1,8 @@
+{
+  "name": "Guia de Dietoterapia Chinesa",
+  "description": "Página de vendas e apresentação do guia completo de Dietoterapia Chinesa para profissionais da saúde, traduzido para o português do Brasil",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
