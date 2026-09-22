@@ -33,15 +33,18 @@ const bundleImg = "https://i.ibb.co/8g0fQfRt/Chat-GPT-Image-6-lug-2026-11-15-23.
 const currency = {
   code: "BRL",
   symbol: "R$",
-  basico: "27,90",
-  completo: "47,90",
+  basico: "10,00",
+  completo: "19,90",
   basicoOriginal: "147,90",
   completoOriginal: "299,90",
   bono1: "85",
   bono2: "56",
   bono3: "68",
   bono4: "85",
-  bonosTotal: "294"
+  bono5: "56",
+  bono6: "97",
+  bono7: "47",
+  bonosTotal: "494"
 };
 
 export default function App() {
@@ -154,8 +157,7 @@ export default function App() {
             className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-[#113827] hover:bg-[#1a4b35] text-white font-semibold text-sm md:text-base tracking-wide transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-lg shadow-forest-dark/20 cursor-pointer group"
             id="hero-cta-btn"
           >
-            Quero obter acesso agora
-            <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+            QUERO ACESSAR AGORA
           </button>
 
           {/* Trust indicators */}
@@ -259,8 +261,7 @@ export default function App() {
               className="inline-flex items-center justify-center px-8 py-4.5 rounded-full bg-[#c59f5b] hover:bg-[#dfc28d] text-forest-dark font-bold text-xs md:text-sm tracking-wide uppercase transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-xl cursor-pointer"
               id="pain-points-cta-btn"
             >
-              Quero acessar agora
-              <span className="ml-2 font-mono">→</span>
+              QUERO ACESSAR AGORA
             </button>
           </div>
         </div>
@@ -397,8 +398,7 @@ export default function App() {
                 className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-[#113827] hover:bg-[#1b4b35] text-white font-semibold text-sm tracking-wide transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-md cursor-pointer"
                 id="whatsapp-cta-btn"
               >
-                Quero obter acesso agora
-                <span className="ml-2">→</span>
+                QUERO ACESSAR AGORA
               </button>
             </div>
           </div>
@@ -419,8 +419,8 @@ export default function App() {
             </h3>
           </div>
 
-          {/* 4 Bonus Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6" id="bonuses-cards-grid">
+          {/* 7 Bonus Cards Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="bonuses-cards-grid">
             
             {/* Bono 1 */}
             <div className="bg-white p-6 rounded-2xl border-2 border-gold-light/40 shadow-sm relative flex flex-col justify-between hover:shadow-md transition-shadow">
@@ -498,6 +498,63 @@ export default function App() {
               </div>
             </div>
 
+            {/* Bono 5 */}
+            <div className="bg-white p-6 rounded-2xl border-2 border-gold-light/40 shadow-sm relative flex flex-col justify-between hover:shadow-md transition-shadow">
+              <div className="absolute -top-3 left-6 bg-gold-medium text-white px-3 py-0.5 rounded text-[10px] font-mono uppercase tracking-widest font-bold">
+                Bônus 5
+              </div>
+              <div className="pt-2">
+                <h4 className="font-serif text-lg font-bold text-forest-dark mb-2">
+                  Caldos e Fundos Terapêuticos
+                </h4>
+                <p className="text-xs text-gray-600 leading-relaxed mb-6">
+                  Receituário prático em PDF com 6 caldos-base desenvolvidos para diferentes padrões energéticos da MTC, como Deficiência de Qi do Baço, Deficiência de Yin, Umidade e Calor. Inclui modo de preparo, orientações de conservação e formas de transformar cada caldo em uma refeição completa.
+                </p>
+              </div>
+              <div className="border-t border-sand-medium pt-3 mt-auto flex items-center justify-between">
+                <span className="text-xs text-gray-500 font-mono">Valor individual:</span>
+                <span className="text-xs font-bold text-red-700 font-mono line-through">{currency.symbol}{currency.bono5} {currency.code}</span>
+              </div>
+            </div>
+
+            {/* Bono 6 */}
+            <div className="bg-white p-6 rounded-2xl border-2 border-gold-light/40 shadow-sm relative flex flex-col justify-between hover:shadow-md transition-shadow">
+              <div className="absolute -top-3 left-6 bg-gold-medium text-white px-3 py-0.5 rounded text-[10px] font-mono uppercase tracking-widest font-bold">
+                Bônus 6
+              </div>
+              <div className="pt-2">
+                <h4 className="font-serif text-lg font-bold text-forest-dark mb-2">
+                  Atlas de Diagnóstico pela Língua
+                </h4>
+                <p className="text-xs text-gray-600 leading-relaxed mb-6">
+                  Atlas visual com fotografias de 12 padrões frequentes da língua, organizados por cor, forma, umidade e saburra. Ajuda a reconhecer o padrão energético provável durante a consulta e funciona como referência visual de apoio, sempre em conjunto com a anamnese e os demais sinais da Medicina Tradicional Chinesa.
+                </p>
+              </div>
+              <div className="border-t border-sand-medium pt-3 mt-auto flex items-center justify-between">
+                <span className="text-xs text-gray-500 font-mono">Valor individual:</span>
+                <span className="text-xs font-bold text-red-700 font-mono line-through">{currency.symbol}{currency.bono6} {currency.code}</span>
+              </div>
+            </div>
+
+            {/* Bono 7 */}
+            <div className="bg-white p-6 rounded-2xl border-2 border-gold-light/40 shadow-sm relative flex flex-col justify-between hover:shadow-md transition-shadow">
+              <div className="absolute -top-3 left-6 bg-gold-medium text-white px-3 py-0.5 rounded text-[10px] font-mono uppercase tracking-widest font-bold">
+                Bônus 7
+              </div>
+              <div className="pt-2">
+                <h4 className="font-serif text-lg font-bold text-forest-dark mb-2">
+                  Combinações Alimentares a Evitar
+                </h4>
+                <p className="text-xs text-gray-600 leading-relaxed mb-6">
+                  Guia prático que apresenta combinações alimentares tradicionalmente desaconselhadas pela MTC, choques entre naturezas térmicas e incompatibilidades segundo cada padrão energético. Inclui exemplos cotidianos, boas combinações e orientações para aplicar esses princípios sem criar restrições desnecessárias.
+                </p>
+              </div>
+              <div className="border-t border-sand-medium pt-3 mt-auto flex items-center justify-between">
+                <span className="text-xs text-gray-500 font-mono">Valor individual:</span>
+                <span className="text-xs font-bold text-red-700 font-mono line-through">{currency.symbol}{currency.bono7} {currency.code}</span>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
@@ -530,47 +587,47 @@ export default function App() {
             <div className="bg-[#0c2a1d] rounded-3xl border border-forest-light/40 p-6 md:p-8 flex flex-col justify-between shadow-xl transition-all duration-300 hover:border-forest-light/70 text-left relative" id="plan-basico-card">
               
               <div>
-                {/* Header Badge */}
-                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#071c14] border border-forest-light/25 text-[10px] tracking-widest font-bold text-gold-medium uppercase mb-6">
-                  <span>⭐</span> PLANO BÁSICO
-                </div>
-
-                {/* Prices */}
-                <div className="mb-6 flex flex-col items-start" id="price-stack-basico">
-                  {/* Badge */}
-                  <div className="inline-flex items-center px-3 py-1 rounded-full bg-[#0d3422] text-emerald-400 text-[10px] font-bold tracking-wider mb-2 uppercase border border-emerald-500/20">
-                    Você economiza mais de 80%
-                  </div>
-                  {/* Original Price */}
-                  <span className="text-xl font-bold text-red-500 line-through tracking-tight mb-1">
-                    {currency.symbol}{currency.basicoOriginal} {currency.code}
-                  </span>
-                  {/* Current Price */}
-                  <div className="flex items-baseline gap-2">
-                    <span className="text-5xl md:text-6xl font-serif font-black tracking-tight text-white leading-none">
-                      {currency.symbol}{currency.basico}
-                    </span>
-                  </div>
-                  {/* Bottom Label */}
-                  <span className="text-xs text-sand-dark/70 mt-2 font-medium tracking-wide">
-                    pagamento único ({currency.code})
-                  </span>
-                </div>
+                {/* Header Title */}
+                <h4 className="text-3xl font-serif font-black text-white tracking-wide uppercase mb-6" id="title-plan-basico">
+                  PLAN BÁSICO
+                </h4>
 
                 {/* Features List */}
                 <div className="space-y-4 pt-4 border-t border-forest-light/30">
-                  <div className="flex items-start gap-2.5 text-xs md:text-sm text-sand-light">
-                    <span className="text-emerald-500 shrink-0 mt-0.5">✔</span>
-                    <span>Manual Completo <strong>"Dietoterapia Chinesa"</strong></span>
+                  <div className="flex items-start gap-2.5 text-xs md:text-sm text-sand-light font-medium">
+                    <span className="text-emerald-500 shrink-0 mt-0.5 font-bold">✔</span>
+                    <span>Manual Completo <strong>"Dietoterapia China"</strong></span>
                   </div>
                   <div className="flex items-start gap-2.5 text-xs md:text-sm text-sand-dark/60 line-through select-none">
-                    <span className="text-red-500 shrink-0 mt-0.5">❌</span>
+                    <span className="text-red-500 shrink-0 mt-0.5 font-bold">❌</span>
                     <span>Sem bônus exclusivos incluídos no pacote</span>
                   </div>
                   <div className="flex items-start gap-2.5 text-xs md:text-sm text-sand-dark/60 line-through select-none">
-                    <span className="text-red-500 shrink-0 mt-0.5">❌</span>
+                    <span className="text-red-500 shrink-0 mt-0.5 font-bold">❌</span>
                     <span>Sem atualizações futuras gratuitas</span>
                   </div>
+                  <div className="flex items-start gap-2.5 text-xs md:text-sm text-sand-dark/60 line-through select-none">
+                    <span className="text-red-500 shrink-0 mt-0.5 font-bold">❌</span>
+                    <span>Sem suporte prioritário de dúvidas por e-mail</span>
+                  </div>
+                </div>
+
+                {/* Prices Stack like the screenshot */}
+                <div className="mb-6 flex flex-col items-center text-center mt-12" id="price-stack-basico">
+                  {/* Original Price Strikethrough in red */}
+                  <span className="text-xs font-bold text-red-500 line-through tracking-wider uppercase mb-1">
+                    De R$165 por apenas
+                  </span>
+                  {/* Current Price */}
+                  <div className="flex items-baseline gap-2 justify-center">
+                    <span className="text-5xl md:text-6xl font-serif font-black tracking-tight text-white leading-none">
+                      R$10
+                    </span>
+                  </div>
+                  {/* Bottom Label */}
+                  <span className="text-[10px] text-sand-dark/60 mt-1.5 font-medium tracking-wide uppercase">
+                    pagamento único (BRL)
+                  </span>
                 </div>
               </div>
 
@@ -580,96 +637,107 @@ export default function App() {
                   href="https://pay.hotmart.com/M106627277Y"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block w-full py-4 rounded-xl bg-[#09261a] hover:bg-[#113827] border border-forest-light/40 text-gold-medium font-bold text-xs tracking-wider uppercase transition-all duration-300 hover:scale-[1.01] active:scale-[0.99] text-center"
+                  className="block w-full py-4 rounded-xl bg-[#09261a] hover:bg-[#113827] border border-white text-white font-bold text-xs tracking-wider uppercase transition-all duration-300 hover:scale-[1.01] active:scale-[0.99] text-center"
                   id="checkout-plan-basico"
                 >
-                  Quero o Plano Básico ➔
+                  Quero o Plano Básico
                 </a>
               </div>
 
             </div>
 
             {/* ACESSO COMPLETO CARD (RECOMMENDED) */}
-            <div className="bg-white text-gray-800 rounded-3xl border-4 border-gold-medium p-6 md:p-8 flex flex-col justify-between shadow-2xl relative transition-all duration-300 hover:shadow-gold-medium/15 text-left scale-100 lg:scale-[1.03] z-10" id="plan-completo-card">
+            <div className="bg-white text-gray-800 rounded-3xl border-4 border-[#cf9f46] p-6 md:p-8 flex flex-col justify-between shadow-2xl relative transition-all duration-300 hover:shadow-[#cf9f46]/15 text-left scale-100 lg:scale-[1.03] z-10" id="plan-completo-card">
               
               {/* Recommended Corner Ribbon / Badge */}
-              <div className="absolute -top-3.5 right-6 bg-gold-medium text-[#113827] px-3.5 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-widest flex items-center gap-1 shadow-md border border-white">
+              <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#cf9f46] text-white px-4 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-widest flex items-center gap-1 shadow-md border border-white whitespace-nowrap">
                 <span>🎗</span> RECOMENDADO
               </div>
 
               <div>
-                {/* Header Badge */}
-                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-[10px] tracking-widest font-extrabold text-emerald-800 uppercase mb-6">
-                  <span>⚡</span> ACESSO COMPLETO
-                </div>
-
-                {/* Prices */}
-                <div className="mb-6 flex flex-col items-start" id="price-stack-completo">
-                  {/* Badge */}
-                  <div className="inline-flex items-center px-3 py-1 rounded-full bg-emerald-50 text-emerald-800 text-[10px] font-bold tracking-wider mb-2 uppercase border border-emerald-200">
-                    Você economiza mais de 75%
-                  </div>
-                  {/* Original Price */}
-                  <span className="text-xl font-bold text-red-500 line-through tracking-tight mb-1">
-                    {currency.symbol}{currency.completoOriginal} {currency.code}
-                  </span>
-                  {/* Current Price */}
-                  <div className="flex items-baseline gap-2">
-                    <span className="text-5xl md:text-6xl font-serif font-black tracking-tight text-[#113827] leading-none">
-                      {currency.symbol}{currency.completo}
-                    </span>
-                  </div>
-                  {/* Bottom Label */}
-                  <span className="text-xs text-gray-500 mt-2 font-medium tracking-wide">
-                    pagamento único ({currency.code})
-                  </span>
-                </div>
-
+                {/* Header Title */}
+                <h4 className="text-3xl font-serif font-black text-forest-dark tracking-wide uppercase mb-6" id="title-plan-completo">
+                  PLAN COMPLETO
+                </h4>
 
                 {/* Features List */}
                 <div className="space-y-4 pt-4 border-t border-gray-100">
-                  <div className="text-xs font-bold text-forest-dark uppercase tracking-wider mb-2">
-                    ✓ TUDO DO PLANO BÁSICO E AINDA:
+                  <div className="flex items-start gap-2.5 text-xs md:text-sm text-gray-700">
+                    <span className="text-emerald-600 shrink-0 mt-0.5 font-bold">✔</span>
+                    <span>Manual Completo <strong>"Dietoterapia China"</strong></span>
                   </div>
                   <div className="flex items-start gap-2.5 text-xs md:text-sm text-gray-700">
-                    <span className="text-emerald-600 shrink-0 mt-0.5">✔</span>
-                    <span>Acesso <strong>Vitalício</strong> permanente (baixe para sempre)</span>
+                    <span className="text-emerald-600 shrink-0 mt-0.5 font-bold">✔</span>
+                    <span>Acesso <strong>Vitalício</strong> permanente (download para sempre)</span>
                   </div>
                   <div className="flex items-start gap-2.5 text-xs md:text-sm text-gray-700">
-                    <span className="text-emerald-600 shrink-0 mt-0.5">✔</span>
-                    <span>Atualizações <strong>100% grátis</strong> pelo resto da vida</span>
+                    <span className="text-emerald-600 shrink-0 mt-0.5 font-bold">✔</span>
+                    <span>Atualizações <strong>100% grátis</strong> de por vida</span>
                   </div>
                   <div className="flex items-start gap-2.5 text-xs md:text-sm text-gray-700">
-                    <span className="text-emerald-600 shrink-0 mt-0.5">✔</span>
-                    <span>Suporte prioritário para dúvidas por e-mail</span>
+                    <span className="text-emerald-600 shrink-0 mt-0.5 font-bold">✔</span>
+                    <span>Suporte prioritário de dúvidas por e-mail</span>
                   </div>
 
-                  {/* Inside card box for bonuses */}
-                  <div className="bg-emerald-50/60 rounded-2xl border border-emerald-100 p-4 mt-5 text-left">
-                    <div className="text-xs font-extrabold text-emerald-900 uppercase tracking-wide mb-3 flex items-center gap-1">
-                      <span>🎁</span> 4 BÔNUS EXCLUSIVOS ({currency.symbol}{currency.bonosTotal} {currency.code}) — 100% GRÁTIS:
+                  {/* Inside card box for bonuses with gift icon */}
+                  <div className="space-y-3 pt-4 border-t border-gray-100">
+                    <div className="flex items-start gap-2 text-gray-800 font-medium">
+                      <span className="shrink-0">🎁</span>
+                      <span><strong>BÔNUS 1:</strong> Tarjetas de Consulta Rápida (Síndromes y Alimentos)</span>
                     </div>
-                    <div className="space-y-2.5 text-[11px] md:text-xs text-gray-700">
-                      <div className="flex items-start gap-2 text-emerald-950 font-medium">
-                        <span className="text-emerald-600 shrink-0">✓</span>
-                        <span>1. Cartões de Consulta Rápida (Síndromes e Alimentos)</span>
-                      </div>
-                      <div className="flex items-start gap-2 text-emerald-950 font-medium">
-                        <span className="text-emerald-600 shrink-0">✓</span>
-                        <span>2. Guia de Receitas da Medicina Tradicional Chinesa</span>
-                      </div>
-                      <div className="flex items-start gap-2 text-emerald-950 font-medium">
-                        <span className="text-emerald-600 shrink-0">✓</span>
-                        <span>3. Calendário Sazonal segundo os Cinco Movimentos</span>
-                      </div>
-                      <div className="flex items-start gap-2 text-emerald-950 font-medium">
-                        <span className="text-emerald-600 shrink-0">✓</span>
-                        <span>4. Fichas de Anamnese e Acompanhamento Nutricional</span>
-                      </div>
+                    <div className="flex items-start gap-2 text-gray-800 font-medium">
+                      <span className="shrink-0">🎁</span>
+                      <span><strong>BÔNUS 2:</strong> Guia de Receitas da Medicina Tradicional Chinesa</span>
                     </div>
+                    <div className="flex items-start gap-2 text-gray-800 font-medium">
+                      <span className="shrink-0">🎁</span>
+                      <span><strong>BÔNUS 3:</strong> Calendário Sazonal segundo os Cinco Movimentos</span>
+                    </div>
+                    <div className="flex items-start gap-2 text-gray-800 font-medium">
+                      <span className="shrink-0">🎁</span>
+                      <span><strong>BÔNUS 4:</strong> Fichas de Anamnese e Acompanhamento Nutricional</span>
+                    </div>
+                    <div className="flex items-start gap-2 text-gray-800 font-medium">
+                      <span className="shrink-0">🎁</span>
+                      <span><strong>BÔNUS 5:</strong> Receituário de Caldos e Fundos Terapêuticos</span>
+                    </div>
+                    <div className="flex items-start gap-2 text-gray-800 font-medium">
+                      <span className="shrink-0">🎁</span>
+                      <span><strong>BÔNUS 6:</strong> Atlas de Diagnóstico Clínico pela Língua</span>
+                    </div>
+                    <div className="flex items-start gap-2 text-gray-800 font-medium">
+                      <span className="shrink-0">🎁</span>
+                      <span><strong>BÔNUS 7:</strong> Combinações Alimentares a Evitar na MTC</span>
+                    </div>
+                  </div>
+
+                  {/* Bottom box matching the green background box in screenshot */}
+                  <div className="bg-[#f0f9f4] rounded-xl border border-emerald-100 p-4 mt-6 text-left">
+                    <p className="text-xs text-emerald-800 font-bold leading-relaxed">
+                      Todo o necessário para orientar desde a sua primeira consulta.
+                    </p>
                   </div>
 
                 </div>
+
+                {/* Prices Stack */}
+                <div className="mb-6 flex flex-col items-center text-center mt-12" id="price-stack-completo">
+                  {/* Original Price Strikethrough in red */}
+                  <span className="text-xs font-bold text-red-500 line-through tracking-wider uppercase mb-1">
+                    De R$299 por apenas
+                  </span>
+                  {/* Current Price */}
+                  <div className="flex items-baseline gap-2 justify-center">
+                    <span className="text-5xl md:text-6xl font-serif font-black tracking-tight text-[#113827] leading-none">
+                      R$19,90
+                    </span>
+                  </div>
+                  {/* Bottom Label */}
+                  <span className="text-[10px] text-gray-400 mt-1.5 font-medium tracking-wide uppercase">
+                    pagamento único (BRL)
+                  </span>
+                </div>
+
               </div>
 
               {/* Action Button */}
@@ -681,7 +749,7 @@ export default function App() {
                   className="block w-full py-4.5 rounded-xl bg-[#113827] hover:bg-[#1b4b35] text-white font-extrabold text-sm tracking-wider uppercase transition-all duration-300 transform hover:scale-[1.02] active:scale-[0.99] shadow-lg hover:shadow-emerald-900/10 text-center"
                   id="checkout-plan-completo"
                 >
-                  Quero o Acesso Completo ➔
+                  QUERO O PLAN COMPLETO
                 </a>
               </div>
 
@@ -892,8 +960,7 @@ export default function App() {
             className="inline-flex items-center justify-center px-10 py-5 rounded-full bg-gold-medium hover:bg-gold-light text-forest-dark font-bold text-sm md:text-base tracking-wider uppercase transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-xl cursor-pointer"
             id="final-cta-checkout-btn"
           >
-            Quero meu acesso agora
-            <span className="ml-2">→</span>
+            QUERO ACESSAR AGORA
           </button>
 
         </div>
@@ -940,7 +1007,7 @@ export default function App() {
                       <span>
                         {selectedPlan === "basico"
                           ? "Plano Básico — Dietoterapia:"
-                          : "Acesso Completo — Manual + 4 Bônus:"}
+                          : "Acesso Completo — Manual + 7 Bônus:"}
                       </span>
                       <span className="font-mono text-emerald-800 font-bold text-sm flex flex-col items-end">
                         <span>
@@ -953,7 +1020,7 @@ export default function App() {
                     <p className="text-gray-500 leading-relaxed font-sans text-[11px]">
                       {selectedPlan === "basico"
                         ? "Inclui o manual completo 'Dietoterapia Chinesa' em formato PDF."
-                        : "Inclui o manual completo (Acesso Vitalício), atualizações grátis permanentes e os 4 bônus práticos de consulta (cartões, livro de receitas, calendário sazonal e fichas de anamnese)."}
+                        : "Inclui o manual completo (Acesso Vitalício), atualizações grátis permanentes e os 7 bônus práticos de consulta (cartões, receitas, calendário sazonal, fichas de anamnese, caldos terapêuticos, atlas da língua e combinações alimentares a evitar)."}
                     </p>
                   </div>
 
