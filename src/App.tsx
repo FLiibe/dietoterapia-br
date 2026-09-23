@@ -76,9 +76,9 @@ export default function App() {
     if (!userName || !userEmail) return;
     setCheckoutStep("success");
     if (selectedPlan === "basico") {
-      window.open("https://pay.hotmart.com/M106627277Y", "_blank");
+      window.open("https://pay.hotmart.com/M106627277Y?checkoutMode=10", "_blank");
     } else {
-      window.open("https://pay.hotmart.com/C106627489Q", "_blank");
+      window.open("https://pay.hotmart.com/C106627489Q?checkoutMode=10", "_blank");
     }
   };
 
@@ -634,7 +634,7 @@ export default function App() {
               {/* Action Button */}
               <div className="mt-8 pt-6 border-t border-forest-light/20">
                 <a
-                  href="https://pay.hotmart.com/M106627277Y"
+                  href="https://pay.hotmart.com/M106627277Y?checkoutMode=10"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block w-full py-4 rounded-xl bg-[#09261a] hover:bg-[#113827] border border-white text-white font-bold text-xs tracking-wider uppercase transition-all duration-300 hover:scale-[1.01] active:scale-[0.99] text-center"
@@ -743,7 +743,7 @@ export default function App() {
               {/* Action Button */}
               <div className="mt-8 pt-6 border-t border-gray-100">
                 <a
-                  href="https://pay.hotmart.com/C106627489Q"
+                  href="https://pay.hotmart.com/C106627489Q?checkoutMode=10"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block w-full py-4.5 rounded-xl bg-[#113827] hover:bg-[#1b4b35] text-white font-extrabold text-sm tracking-wider uppercase transition-all duration-300 transform hover:scale-[1.02] active:scale-[0.99] shadow-lg hover:shadow-emerald-900/10 text-center"
