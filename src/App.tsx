@@ -34,7 +34,7 @@ const currency = {
   code: "BRL",
   symbol: "R$",
   basico: "10,00",
-  completo: "19,90",
+  completo: "47,90",
   basicoOriginal: "147,90",
   completoOriginal: "299,90",
   bono1: "85",
@@ -729,7 +729,7 @@ export default function App() {
                   {/* Current Price */}
                   <div className="flex items-baseline gap-2 justify-center">
                     <span className="text-5xl md:text-6xl font-serif font-black tracking-tight text-[#113827] leading-none">
-                      R$19,90
+                      R$47,90
                     </span>
                   </div>
                   {/* Bottom Label */}
