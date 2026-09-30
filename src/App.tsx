@@ -22,6 +22,10 @@ import AcuLogo from "./components/AcuLogo";
 import MovementTabs from "./components/MovementTabs";
 import WhatsAppChat from "./components/WhatsAppChat";
 import FAQAccordion from "./components/FAQAccordion";
+import Upsell from "./pages/Upsell";
+import Downsell from "./pages/Downsell";
+import Obrigado from "./pages/Obrigado";
+import upsellBundleImg from "./assets/images/upsell_toolkit_bundle_pt_1790791765739.jpg";
 
 // Import generated book bundle image
 const bundleImg = "https://i.ibb.co/8g0fQfRt/Chat-GPT-Image-6-lug-2026-11-15-23.png";
@@ -49,6 +53,7 @@ const currency = {
 
 export default function App() {
   // --- STATE DECLARATIONS ---
+  const [currentPath, setCurrentPath] = useState(window.location.pathname);
 
   // Live countdown timer state (starting from 10 minutes, 51 seconds like the original screenshot)
   const [timeLeft, setTimeLeft] = useState(651); // 10 minutes * 60 + 51 = 651 seconds
@@ -59,11 +64,31 @@ export default function App() {
   const [userEmail, setUserEmail] = useState("");
 
   useEffect(() => {
+    const handlePopState = () => {
+      setCurrentPath(window.location.pathname);
+    };
+    window.addEventListener("popstate", handlePopState);
+    return () => window.removeEventListener("popstate", handlePopState);
+  }, []);
+
+  useEffect(() => {
+    // Pre-carregar a imagem pesada do mockup para carregamento instantâneo nas rotas de upsell e downsell
+    const img = new Image();
+    img.src = upsellBundleImg;
+  }, []);
+
+  useEffect(() => {
     const timer = setInterval(() => {
       setTimeLeft((prev) => (prev > 1 ? prev - 1 : 651)); // Loop for demo purposes
     }, 1000);
     return () => clearInterval(timer);
   }, []);
+
+  const navigateTo = (path: string) => {
+    window.history.pushState({}, "", path);
+    setCurrentPath(path);
+    window.scrollTo({ top: 0, behavior: "instant" });
+  };
 
   const formatTime = (seconds: number) => {
     const m = Math.floor(seconds / 60);
@@ -80,6 +105,13 @@ export default function App() {
     } else {
       window.open("https://pay.hotmart.com/C106627489Q?checkoutMode=10", "_blank");
     }
+
+    // Redirect current page to the /upsell page after a brief delay
+    setTimeout(() => {
+      setShowCheckoutModal(false);
+      setCheckoutStep("form");
+      navigateTo("/upsell");
+    }, 1200);
   };
 
   const handleResetCheckout = () => {
@@ -95,6 +127,21 @@ export default function App() {
       el.scrollIntoView({ behavior: "smooth" });
     }
   };
+
+  // Route condition for upsell
+  if (currentPath.toLowerCase().replace(/\/$/, "") === "/upsell") {
+    return <Upsell onBackToMain={() => navigateTo("/")} />;
+  }
+
+  // Route condition for downsell
+  if (currentPath.toLowerCase().replace(/\/$/, "") === "/downsell") {
+    return <Downsell onBackToMain={() => navigateTo("/")} />;
+  }
+
+  // Route condition for obrigado
+  if (currentPath.toLowerCase().replace(/\/$/, "") === "/obrigado") {
+    return <Obrigado onBackToMain={() => navigateTo("/")} />;
+  }
 
   return (
     <div className="min-h-screen bg-sand-light antialiased font-sans text-gray-800">
