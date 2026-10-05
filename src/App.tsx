@@ -28,7 +28,7 @@ import Obrigado from "./pages/Obrigado";
 import upsellBundleImg from "./assets/images/upsell_toolkit_bundle_pt_1790791765739.jpg";
 
 // Import generated book bundle image
-const bundleImg = "https://i.ibb.co/8g0fQfRt/Chat-GPT-Image-6-lug-2026-11-15-23.png";
+const bundleImg = "https://res.cloudinary.com/dgncwrnvw/image/upload/v1791161343/DTBR_okqcar.webp";
 
 // ============================================================================
 // REGION: FIXED BRAZILIAN REAL (BRL) CURRENCY CONFIGURATION

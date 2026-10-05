@@ -1,6 +1,6 @@
 import React from "react";
 
-const logoImg = "https://i.ibb.co/XxHhnRDb/Chat-GPT-Image-3-lug-2026-11-10-53.png";
+const logoImg = "https://res.cloudinary.com/dgncwrnvw/image/upload/v1791161343/DTBR_LOGO_i4aom5.webp";
 
 interface AcuLogoProps {
   className?: string;
